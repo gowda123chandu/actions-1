@@ -1,11 +1,7 @@
 name: my first workflow
 on: 
 
-  push:  
-    
-    branches:
-
-      - main
+  push
 
 jobs:
   first_job:
