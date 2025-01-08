@@ -5,12 +5,13 @@ on:
     
     branches:
 
-      - master
+      - main
 
 jobs:
-    first_job:
-       runs-on: ubuntu-latest
-       steps:
+  first_job:
+     name: first_job
+     runs-on: ubuntu-latest
+     steps:
        - name: checkout Repo
          uses: actions/checkout@v4
        
