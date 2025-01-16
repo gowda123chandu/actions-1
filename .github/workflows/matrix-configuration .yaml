@@ -1,0 +1,24 @@
+name: matrix-config
+
+on: push
+
+jobs:
+  example_matrix:
+    strategy:
+      matrix:
+        version: [10, 12, 14]
+        os: [ubuntu-latest, windows-latest]
+
+    runs-on: matrix.os
+    steps:
+      - name: Checkout the Repository
+        uses: actions/checkout@v4
+    
+      - name: Welcome message
+        run: echo "My first github action job"
+      
+      - name: list file
+        run: ls
+      
+      - name: Read file
+        run: cat README.md
