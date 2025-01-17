@@ -1,0 +1,22 @@
+name: matrix-configuration
+
+on: push
+
+jobs:
+    deploy:
+       strategy:
+        matrix:
+            os: [ubuntu-latest, windows_latest]
+            images: [helloworld, alpine]
+
+       runs-on: $ {{ matrix.os }}
+       steps:
+       - name: echo docker details
+         run: $ {{ matrix.images }}
+
+
+
+
+
+ 
+ 
