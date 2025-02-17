@@ -1,0 +1,9 @@
+docker:
+steps:
+- name: checkout repo
+  uses: actions-1/checkout@v4
+- name: dockerhub login
+  uses: docker/login-action@v2.2.0
+  with: 
+  username: ${{vars.dockerhub_username}}
+  password: ${{secerts.dockerhub_passwords}}
