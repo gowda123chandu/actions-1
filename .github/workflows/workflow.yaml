@@ -1,9 +1,9 @@
 name: Hello_world workflows
 
 on:
- push:
-   branches:
-     -main
+  push:
+    branches:
+      - main
 
 jobs:
    hello:
